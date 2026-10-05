@@ -26,19 +26,19 @@ int main(){
   {
      if (isStudent)
      {
-         printf("Main price is %d.You got total 30 percent discount. 20 percent for being Student and rest of 10 percent for being Senior\n.",price);
+         printf("You got total 30 percent discount. 20 percent for being Student and rest of 10 percent for being Senior\n.");
          price *= 0.7;
 
      }
      
 } else if (isSenior)
 {
-         printf("Main price is %d.You got only 10 percent discount for being Senior.\n",price);
+         printf("You got only 10 percent discount for being Senior.\n");
          price *= 0.9;
 
 } else if (isStudent)
 {
-       printf("Main price is %d.You got only 20 percent discount for being Student.\n",price);
+       printf("You got only 20 percent discount for being Student.\n");
        price *= 0.8;
 
         
