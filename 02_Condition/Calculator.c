@@ -1,37 +1,38 @@
 #include<stdio.h>
 int main(){
 
-    int a,b,c;
+    int a,b,c,sum,sub,multip,divide;
+    float avarage;
 
-    printf("Enter a number which you want to calculate:_"
+    printf("Enter a number which you want to calculate:_\n"
         "1. Addition\n"
         "2. Subtraction\n"
         "3. Multiplication\n"
         "4. Division\n"
         "5. Avarage\n");
          scanf("%d",&a);
-         printf("Enter Your two numbers:_");
+         printf("Enter Your two numbers:_\n");
             scanf("%d %d",&b,&c);
         switch(a){
             case 1:
-            int  sum=b+c;
+              sum=b+c;
              printf("The sum of %d + %d= %d \n",b,c,sum);
              break;
             case 2:
-           int  sub=b-c;
+             sub=b-c;
             printf("The subtraction of %d - %d = %d",b,c,sub);
-            break;
+             break;
             case 3:
-            int multip=b*c;
+             multip=b*c;
              printf("The multiplication of %d * %d = %d",b,c,multip);
              break;
              case 4:
-             int divide=b/c;
-             printf("The division of %d / %d = %d",b,c,divide);
+              divide=b/c;
+              printf("The division of %d / %d = %d",b,c,divide);
              break;
              case 5:
-             float avarage=(b+c)/2.0; 
-             printf("The avarage of %d and %d=%.2f",b,c,avarage);
+               avarage=(b+c)/2.0; 
+              printf("The avarage of %d and %d=%.2f",b,c,avarage);
              break;
 
 
