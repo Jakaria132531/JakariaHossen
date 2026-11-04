@@ -1,47 +1,22 @@
 #include<stdio.h>
 int main(){
-
-
-    int veichleType,duration,parkingFee=1;
-
-/*
-
-printf("Enter you veichle type._\n"
-"1.Motorcycle\n"
-"2.Car\n"	
-"3.Bus\n"
-"4.Truck\n"    );
-scanf("%d",&veichleType);
-if (veichleType<=4)
-{
-printf("Enter your duration._\n"
-"1.Motorcycle---per hour:20tk\n"
-"2.Car---per hour:50tk\n"
-"3.Bus---per hour:100t\nk"
-"4.Truck---per hour:120tk\n" ); 
-scanf("%d",&duration);
- 
-} else
-{
-    printf("Enter a valid number between 1 to 4\n");
-}
- */
-
+    
+    int vehicleType,duration,parkingFee=0;
 printf("Enter your parking duration(h)._\n"
 "1.Motorcycle---per hour:20tk\n"
 "2.Car---per hour:50tk\n"
 "3.Bus---per hour:100tk\n"
 "4.Truck---per hour:120tk\n" ); 
 scanf("%d",&duration);
-
-
-printf("Enter you veichle type._\n"
+if (duration>0)
+{
+   printf("Enter you veichle type._\n"
 "1.Motorcycle\n"
 "2.Car\n"	
 "3.Bus\n"
 "4.Truck\n"    );
-scanf("%d",&veichleType);
-switch (veichleType)
+scanf("%d",&vehicleType);
+switch (vehicleType)
 {
 case 1:
    parkingFee=20*duration;
@@ -63,6 +38,11 @@ printf("Your parking fee is %d for Truckfor %d\n",parkingFee,duration);
 default:printf("enter a valid number between 1 to 4.\n");
     break;
 }
+
+} else printf("enter a valid durarion.");
+
+
+
 
     return 0;
 }

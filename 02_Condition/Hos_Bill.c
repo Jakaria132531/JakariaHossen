@@ -14,7 +14,7 @@
 "3.Professor Consultation---Visiting price:1,500tk\n");
 scanf("%d",&consultation);
     
-switch (consultation)
+switch (consultation) 
 {
 case 1:
 printf("You choose General Physician. Your visiting price is 500tk only.\n");

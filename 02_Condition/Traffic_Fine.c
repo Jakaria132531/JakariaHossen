@@ -1,141 +1,190 @@
-#include<stdio.h>
-int main(){
-int choise,violatiionType;
 
-    printf("Select veichle type._\n"
-"1.Motorcycle\n"
-"2.Car\n"
-"3.Bus\n"
-"4.Truck\n" );
-scanf("%d",&choise);
+#include <stdio.h>
 
-
-switch (choise)
+int main()
 {
-case 1:
-printf("Choose Traffic Violation_\n"
-"1.Overspeeding\n"
-"2.No Helmet (Motorcycle)\n"
-"3.No Seat Belt\n"
-"4.Red Light Violation\n"  );
-scanf("%d",&violatiionType);
-switch (violatiionType)
-{
-case 1:
-printf("Overspeeding -- Fine (tk) 2,000");
-break;
-case 2:
-printf("No Helmet (Motorcycle) -- Fine (tk) 1,000");
-break;
-case 3:
-printf("No Seat Belt -- Fine (tk) 1,000");
-break;
-case 4:
-printf("Red Light Violation -- Fine (tk) 1,500");
-break;
+     int choise, violatiionType;
 
-default: printf("enter a valid number");
-    break;
-}
+     int fine = 0, total = 0;
+    int Overspeeding = 0;
+    int No_Helmet = 0;
+    int Red_Light = 0;
+    int No_Seat_Belt = 0;
 
-break;
+     int overChoice;
 
+     printf("Select veichle type._\n"
+           "1.Motorcycle\n"
+           "2.Car\n"
+           "3.Bus\n"
+           "4.Truck\n");
 
-case 2:
-printf("Choose Traffic Violation_\n"
-"1.Overspeeding\n"
-"2.No Helmet (Motorcycle)\n"
-"3.No Seat Belt\n"
-"4.Red Light Violation\n"  );
-scanf("%d",&violatiionType);
-switch (violatiionType)
-{
-case 1:
-printf("Overspeeding -- Fine (tk) 2,000");
-break;
-case 2:
-printf("No Helmet (Motorcycle) -- Fine (tk) 1,000");
-break;
-case 3:
-printf("No Seat Belt -- Fine (tk) 1,000");
-break;
-case 4:
-printf("Red Light Violation -- Fine (tk) 1,500");
-break;
+     scanf("%d", &choise);
 
-default: printf("enter a valid number");
-    break;
-}
+     switch (choise)
+    {
+    case 1:
 
-break;
+         do
+        {
+             printf("Choose Traffic Violation_\n"
+                   "1.Overspeeding\n"
+                   "2.No Helmet (Motorcycle)\n"
+                   "3.Red Light Violation\n");
 
+             scanf("%d", &violatiionType);
 
+             switch (violatiionType)
+            {
+            case 1:
 
-case 3:
-printf("Choose Traffic Violation_\n"
-"1.Overspeeding\n"
-"2.No Helmet (Motorcycle)\n"
-"3.No Seat Belt\n"
-"4.Red Light Violation\n"  );
-scanf("%d",&violatiionType);
-switch (violatiionType)
-{
-case 1:
-printf("Overspeeding -- Fine (tk) 2,000");
-break;
-case 2:
-printf("No Helmet (Motorcycle) -- Fine (tk) 1,000");
-break;
-case 3:
-printf("No Seat Belt -- Fine (tk) 1,000");
-break;
-case 4:
-printf("Red Light Violation -- Fine (tk) 1,500");
-break;
+                 Overspeeding += 2000;
 
-default: printf("enter a valid number");
-    break;
-}
+                break;
 
-break;
+            case 2:
 
+                 No_Helmet += 1000;
 
+                break;
 
-case 4:
-printf("Choose Traffic Violation_\n"
-"1.Overspeeding\n"
-"2.No Helmet (Motorcycle)\n"
-"3.No Seat Belt\n"
-"4.Red Light Violation\n"  );
-scanf("%d",&violatiionType);
-switch (violatiionType)
-{
-case 1:
-printf("Overspeeding -- Fine (tk) 2,000");
-break;
-case 2:
-printf("No Helmet (Motorcycle) -- Fine (tk) 1,000");
-break;
-case 3:
-printf("No Seat Belt -- Fine (tk) 1,000");
-break;
-case 4:
-printf("Red Light Violation -- Fine (tk) 1,500");
-break;
+            case 3:
 
-default: printf("enter a valid number");
-    break;
-}
+                 Red_Light += 1500;
 
-break;
+                break;
 
-default: printf("enter a valid number.");
-    break;
-}
+            default:
 
+                 printf("enter a valid number");
 
+                break;
+            }
 
+             printf("Do you have any more violation?\n"
+                   "If Yes,enter 1. If No,enter 2\n_");
 
+             scanf("%d", &overChoice);
 
-    return 0;
+        } while (overChoice != 2);
+
+         total = Overspeeding + Red_Light + No_Helmet;
+
+         printf("\nYour total violation bil is=%d.%d for overspeed,%d for No helmet, %d for red light\n",
+               total, Overspeeding, No_Helmet, Red_Light);
+
+        break;
+
+    case 2:
+
+         do
+        {
+             printf("Choose Traffic Violation_\n"
+                   "1.Overspeeding\n"
+                   "2.No Seat Belt\n"
+                   "3.Red Light Violation\n");
+
+             scanf("%d", &violatiionType);
+
+             switch (violatiionType)
+            {
+            case 1:
+
+                 Overspeeding += 2000;
+
+                break;
+
+            case 2:
+
+                 No_Seat_Belt += 1000;
+
+                break;
+
+            case 3:
+
+                 Red_Light += 1500;
+
+                break;
+
+            default:
+
+                 printf("enter a valid number");
+
+                break;
+            }
+
+             printf("Do you have any more violation?\n"
+                   "If Yes,enter 1. If No,enter 2\n_");
+
+             scanf("%d", &overChoice);
+
+        } while (overChoice != 2);
+
+         total = Overspeeding + Red_Light + No_Seat_Belt;
+
+         printf("\nYour total violation bil is=%d.%d for overspeed,%d for No helmet, %d for red light\n",
+               total, Overspeeding, No_Seat_Belt, Red_Light);
+
+        break;
+
+    case 3:
+
+         do
+        {
+             printf("Choose Traffic Violation_\n"
+                   "1.Overspeeding\n"
+                   "2.No Seat Belt\n"
+                   "3.Red Light Violation\n");
+
+             scanf("%d", &violatiionType);
+
+             switch (violatiionType)
+            {
+            case 1:
+
+                 Overspeeding += 2000;
+
+                break;
+
+            case 2:
+
+                 No_Seat_Belt += 1000;
+
+                break;
+
+            case 3:
+
+                 Red_Light += 1500;
+
+                break;
+
+            default:
+
+                 printf("enter a valid number");
+
+                break;
+            }
+
+             printf("Do you have any more violation?\n"
+                   "If Yes,enter 1. If No,enter 2\n_");
+
+             scanf("%d", &overChoice);
+
+        } while (overChoice != 2);
+
+         total = Overspeeding + Red_Light + No_Seat_Belt;
+
+         printf("\nYour total violation bil is=%d.%d for overspeed,%d for No helmet, %d for red light\n",
+               total, Overspeeding, No_Seat_Belt, Red_Light);
+
+        break;
+
+    default:
+
+         printf("enter a valid number.");
+
+        break;
+    }
+
+     return 0;
 }
