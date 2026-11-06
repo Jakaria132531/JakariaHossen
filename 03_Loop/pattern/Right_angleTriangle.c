@@ -47,7 +47,12 @@ B B
 C C C
 D D D D
 E E E E E
-
+(6) to make this pattern,follow same process of no 3
+A
+B C
+D E F
+G H I J
+K L M N O
 
 */
     int n,count=0;

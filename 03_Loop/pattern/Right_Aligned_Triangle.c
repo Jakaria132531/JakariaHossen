@@ -12,7 +12,7 @@ int main(){
         }
         for (int j = 1; j <=i; j++)
         {
-            printf("*");
+            printf("*"); // adding a space after the star,it'll create a piramid ("* ")
         }
         printf("\n"); 
     }
